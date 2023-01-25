@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on darwin)" generated="20230125 15:45:52.975" rpa="false" schemaversion="3">
+<suite id="s1" name="Fb" source="/Users/tanakorn/Automation Testing/google/fb.robot">
+<test id="s1-t1" name="Invalid Case: Login to Facebook" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 15:45:53.054" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<status status="PASS" starttime="20230125 15:45:53.054" endtime="20230125 15:46:01.532"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>${F_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 15:46:01.534" level="INFO">Typing text '1234' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230125 15:46:01.533" endtime="20230125 15:46:02.084"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=pass</arg>
+<arg>${F_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 15:46:02.085" level="INFO">Typing text '1234' into text field 'id=pass'.</msg>
+<status status="PASS" starttime="20230125 15:46:02.084" endtime="20230125 15:46:02.180"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name=login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230125 15:46:02.180" level="INFO">Clicking button 'name=login'.</msg>
+<status status="PASS" starttime="20230125 15:46:02.180" endtime="20230125 15:46:02.588"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>name=login</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230125 15:46:05.549" level="INFO">Current page contains element 'name=login'.</msg>
+<status status="PASS" starttime="20230125 15:46:02.588" endtime="20230125 15:46:05.549"/>
+</kw>
+<status status="PASS" starttime="20230125 15:45:53.053" endtime="20230125 15:46:05.550"/>
+</test>
+<test id="s1-t2" name="Valid Case: Login to Facebook" line="24">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 15:46:05.551" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<status status="PASS" starttime="20230125 15:46:05.550" endtime="20230125 15:46:14.085"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>${T_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 15:46:14.086" level="INFO">Typing text 'my_username' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230125 15:46:14.085" endtime="20230125 15:46:14.557"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=pass</arg>
+<arg>${T_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 15:46:14.558" level="INFO">Typing text 'my_pass' into text field 'id=pass'.</msg>
+<status status="PASS" starttime="20230125 15:46:14.558" endtime="20230125 15:46:14.684"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name=login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230125 15:46:14.684" level="INFO">Clicking button 'name=login'.</msg>
+<status status="PASS" starttime="20230125 15:46:14.684" endtime="20230125 15:46:15.038"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>name=login</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20230125 15:46:22.777" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230125 15:46:22.777" level="FAIL">Page should not have contained element 'name=login'.</msg>
+<status status="FAIL" starttime="20230125 15:46:15.038" endtime="20230125 15:46:22.778"/>
+</kw>
+<status status="FAIL" starttime="20230125 15:46:05.550" endtime="20230125 15:46:22.779">Page should not have contained element 'name=login'.</status>
+</test>
+<status status="FAIL" starttime="20230125 15:45:52.976" endtime="20230125 15:46:22.779"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Fb">Fb</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
