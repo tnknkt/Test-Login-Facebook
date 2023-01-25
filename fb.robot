@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 ${F_USERNAME}    1234
 ${F_PASSWORD}    1234
 ${T_USERNAME}    my_username
-${T_PASSWORD}    !my_password
+${T_PASSWORD}    my_password
 ${URL}        https://www.facebook.com/
 
 *** Test Cases ***
