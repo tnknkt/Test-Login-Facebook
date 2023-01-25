@@ -3,8 +3,8 @@ Library    SeleniumLibrary
 *** Variables ***
 ${F_USERNAME}    1234
 ${F_PASSWORD}    1234
-${T_USERNAME}    my_username
-${T_PASSWORD}    my_pass
+${T_USERNAME}    0830501407
+${T_PASSWORD}    !Bb0809239346
 ${URL}        https://www.facebook.com/
 
 *** Test Cases ***
@@ -21,6 +21,10 @@ Invalid Case: Login to Facebook
 
     #Verify Fail
         Page Should Contain Element    name=login
+        
+    #Close Browser
+        Close Browser
+        
 Valid Case: Login to Facebook 
     #Open Browser To Login Page 
         Open Browser    ${URL}    chrome 
@@ -31,4 +35,9 @@ Valid Case: Login to Facebook
 
     #Submit Login Form 
         Click Button   name=login
+
+    #Verify Fail
         Page Should Not Contain Element    name=login
+
+    #Close Browser
+        Close Browser
