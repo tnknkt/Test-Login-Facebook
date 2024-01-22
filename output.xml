@@ -1,101 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on darwin)" generated="20230125 19:22:02.027" rpa="false" schemaversion="3">
-<suite id="s1" name="Fb" source="/Users/tanakorn/Automation Testing/google/fb.robot">
-<test id="s1-t1" name="Invalid Case: Login to Facebook" line="11">
-<kw name="Open Browser" library="SeleniumLibrary">
+<robot generator="Robot 7.0 (Python 3.9.13 on darwin)" generated="2024-01-22T11:31:47.396745" rpa="false" schemaversion="5">
+<suite id="s1" name="Fb" source="/Users/tanakorn/Automation Testing/fb/Test-Login-Facebook/fb.robot">
+<test id="s1-t1" name="Invalid Case: Login to Facebook" line="6">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:31:47.473716" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230125 19:22:02.108" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
-<status status="PASS" starttime="20230125 19:22:02.108" endtime="20230125 19:22:10.805"/>
+<status status="PASS" start="2024-01-22T11:31:47.473554" elapsed="10.092290"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:31:57.567333" level="INFO">Typing text '1234' into text field 'id=email'.</msg>
 <arg>id=email</arg>
 <arg>${F_USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230125 19:22:10.806" level="INFO">Typing text '1234' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20230125 19:22:10.805" endtime="20230125 19:22:11.060"/>
+<status status="PASS" start="2024-01-22T11:31:57.566619" elapsed="1.475964"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:31:59.043070" level="INFO">Typing text '1234' into text field 'id=pass'.</msg>
 <arg>id=pass</arg>
 <arg>${F_PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230125 19:22:11.060" level="INFO">Typing text '1234' into text field 'id=pass'.</msg>
-<status status="PASS" starttime="20230125 19:22:11.060" endtime="20230125 19:22:11.212"/>
+<status status="PASS" start="2024-01-22T11:31:59.042837" elapsed="0.349632"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:31:59.392993" level="INFO">Clicking button 'name=login'.</msg>
 <arg>name=login</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230125 19:22:11.212" level="INFO">Clicking button 'name=login'.</msg>
-<status status="PASS" starttime="20230125 19:22:11.212" endtime="20230125 19:22:11.581"/>
+<status status="PASS" start="2024-01-22T11:31:59.392801" elapsed="0.578143"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:32:05.332154" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-01-22T11:32:05.332315" level="FAIL">Element '//*[@id="login_link"]/div/a' not visible after 5 seconds.</msg>
 <arg>//*[@id="login_link"]/div/a</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230125 19:22:11.581" endtime="20230125 19:22:14.709"/>
+<status status="FAIL" start="2024-01-22T11:31:59.971332" elapsed="5.361846">Element '//*[@id="login_link"]/div/a' not visible after 5 seconds.</status>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
 <arg>Log in to Facebook</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230125 19:22:14.749" level="INFO">Current page contains text 'Log in to Facebook'.</msg>
-<status status="PASS" starttime="20230125 19:22:14.710" endtime="20230125 19:22:14.749"/>
+<status status="NOT RUN" start="2024-01-22T11:32:05.333581" elapsed="0.000031"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230125 19:22:14.749" endtime="20230125 19:22:14.812"/>
-</kw>
-<status status="PASS" starttime="20230125 19:22:02.108" endtime="20230125 19:22:14.812"/>
+<status status="FAIL" start="2024-01-22T11:31:47.472876" elapsed="17.860945">Element '//*[@id="login_link"]/div/a' not visible after 5 seconds.</status>
 </test>
-<test id="s1-t2" name="Valid Case: Login to Facebook" line="30">
-<kw name="Open Browser" library="SeleniumLibrary">
+<test id="s1-t2" name="Valid Case: Login to Facebook" line="25">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:32:05.334517" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230125 19:22:14.813" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
-<status status="PASS" starttime="20230125 19:22:14.813" endtime="20230125 19:22:23.181"/>
+<status status="PASS" start="2024-01-22T11:32:05.334352" elapsed="9.744187"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:32:15.079592" level="INFO">Typing text '0830501407' into text field 'id=email'.</msg>
 <arg>id=email</arg>
 <arg>${T_USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230125 19:22:23.183" level="INFO">Typing text '0830501407' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20230125 19:22:23.182" endtime="20230125 19:22:23.591"/>
+<status status="PASS" start="2024-01-22T11:32:15.079139" elapsed="1.723495"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:32:16.803222" level="INFO">Typing text '!Bb0809239346' into text field 'id=pass'.</msg>
 <arg>id=pass</arg>
 <arg>${T_PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230125 19:22:23.592" level="INFO">Typing text '!Bb0809239346' into text field 'id=pass'.</msg>
-<status status="PASS" starttime="20230125 19:22:23.592" endtime="20230125 19:22:23.912"/>
+<status status="PASS" start="2024-01-22T11:32:16.802940" elapsed="0.525584"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:32:17.329162" level="INFO">Clicking button 'name=login'.</msg>
 <arg>name=login</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230125 19:22:23.912" level="INFO">Clicking button 'name=login'.</msg>
-<status status="PASS" starttime="20230125 19:22:23.912" endtime="20230125 19:22:24.313"/>
+<status status="PASS" start="2024-01-22T11:32:17.328885" elapsed="0.512841"/>
 </kw>
-<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:32:33.319159" level="INFO">Current page does not contain text 'Facebook helps you connect and share with the people in your life.'.</msg>
 <arg>Facebook helps you connect and share with the people in your life.</arg>
 <doc>Verifies the current page does not contain ``text``.</doc>
-<msg timestamp="20230125 19:22:33.644" level="INFO">Current page does not contain text 'Facebook helps you connect and share with the people in your life.'.</msg>
-<status status="PASS" starttime="20230125 19:22:24.313" endtime="20230125 19:22:33.644"/>
+<status status="PASS" start="2024-01-22T11:32:17.842035" elapsed="15.477185"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230125 19:22:33.644" endtime="20230125 19:22:33.715"/>
-</kw>
-<status status="PASS" starttime="20230125 19:22:14.812" endtime="20230125 19:22:33.716"/>
+<status status="PASS" start="2024-01-22T11:32:05.334065" elapsed="27.985572"/>
 </test>
-<status status="PASS" starttime="20230125 19:22:02.028" endtime="20230125 19:22:33.716"/>
+<status status="FAIL" start="2024-01-22T11:31:47.397800" elapsed="45.922354"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Fb">Fb</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="Fb">Fb</stat>
 </suite>
 </statistics>
 <errors>

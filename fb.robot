@@ -1,11 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-*** Variables ***
-${F_USERNAME}    1234
-${F_PASSWORD}    1234
-${T_USERNAME}    my_username
-${T_PASSWORD}    my_password
-${URL}        https://www.facebook.com/
+Resource    ${CURDIR}/fb_data.resource
 
 *** Test Cases ***
 Invalid Case: Login to Facebook 
